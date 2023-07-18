@@ -8,3 +8,15 @@
 # Output: [0,1]
 # Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
+ 
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        output = []
+        for num in nums:
+            for subNum in nums[(nums.index(num) + 1):]:
+                if num + subNum == target:
+                    output = [nums.index(num), nums.index(subNum, (nums.index(num) + 1))]
+                else:
+                    continue
+        return output
