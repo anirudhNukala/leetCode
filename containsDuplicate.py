@@ -4,15 +4,16 @@
 # Input: nums = [1,2,3,1]
 # Output: true
 
-nums = [1,2,3,4]
+nums = [1,1,1,3,3,4,3,2,4,2]
 
-valid = 0
-while(valid = 0):
-    for num in nums:
-        if num in nums[(nums.index(num) + 1):]:
-            valid += 1
-        else:
-            continue
+valid = False
+
+for num in nums:
+    if num in nums[(nums.index(num) + 1):]:
+        valid = True
+        break
+    else:
+        continue
     
 if valid:
     print(True)
