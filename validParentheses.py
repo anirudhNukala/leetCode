@@ -8,15 +8,3 @@
 # Input: s = "()[]{}"
 # Output: true
 
-s = "{[]}"
-sList = list(s)
-validDict = {'(':')', '[':']', '{':'}'}
-left = '([{'
-right = ')]}'
-lCount = 0
-rCount = 0
-for char in s:
-    if char in left:
-        lCount += 1
-    elif char in right:
-        rCount += 1
